@@ -41,11 +41,3 @@
       </ul>
     </header>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close"><img src="../assets/img/red-cross.png" alt="Click on the red cross for close pop-up"></span>
-            <p>Le back fonctionne pas.</p>
-        </div>
-    </div>
