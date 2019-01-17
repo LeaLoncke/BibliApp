@@ -194,6 +194,7 @@ option:hover {
 }
 
 #dropdownButton {
+    padding-left: 15px;
     width: 35px;
 }
 
