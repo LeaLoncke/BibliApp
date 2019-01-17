@@ -95,6 +95,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+    :root {
+        --grey: #394032;
+        --blue: #51CCCC;
+    }
 
 
 /* ##################################################################### */
@@ -103,28 +107,586 @@ textarea {
 /* Extra small devices (phones, less than 768px) */
 
 
+/* All pages */
+input {
+    margin: 10px;
+    border: none;
+    border-bottom: solid var(--blue) 2px;
+    background-color: #FFF;
+    color: var(--grey);
+}
+
+.submit, .falseButton {
+    border: solid var(--blue) 2px;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: #FFF;
+    color: var(--blue);
+}
+
+.submit:hover, .falseButton:hover {
+    background-color: var(--blue);
+    color: #FFF;
+}
+
+.falseButton {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--blue);
+    opacity: 1;
+}
+
+select {
+    border: solid var(--blue) 2px;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: var(--blue);
+    padding: 5px 10px;
+}
+
+option {
+    -moz-appearance: none;
+    border: solid var(--blue) 1px;
+    background-color: #FFF;
+    color: var(--blue);
+}
+
+input, select, option {
+    max-width: 100%;
+}
+
+select:focus, option:focus, input:focus {
+    outline: none;
+}
+
+option:hover {
+    background-color: #FFF;
+}
+
+
+/* Header */
+.navbar {
+    margin: 0;
+    border: solid var(--blue) 1px;
+    padding: 5px 10px;
+    background-color: var(--blue);
+    color: #FFF;
+}
+
+.navbar > h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.navbarMobile {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: bottom;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+#dropdownButton {
+    width: 35px;
+}
+
+#dropdownContent {
+    display: none;
+    position: absolute;
+    border: 1px solid var(--blue);
+    padding: 5px;
+    top: 40px;
+    right: 0;
+    z-index: 1;
+    background-color: #FFF;
+}
+
+#dropdownContent > a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.navbarTabletDesktop {
+    display: none;
+}
+
+
+/* Connexion/Inscription pages */
+.centerForm {
+    margin: 0 auto;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.centerForm > p, .centerForm > a {
+    margin: 0;
+    color: var(--grey);
+    opacity: 0.6;
+}
+
+
+/* Home page */
+.barForm {
+    margin: 5px 15px;
+    display: flex;
+    flex-flow: column-reverse wrap;
+    align-items: center; 
+}
+
+.barForm > form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookCards {
+    margin: 0 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.bookCard {
+    position: relative;
+    margin: 2%;
+    border: solid var(--blue) 2px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+}
+
+.bookCard > img {
+    max-width: 150px;
+}
+
+.bookCard > a {
+    margin: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.bookCard > a:hover {
+    color: var(--blue);
+}
+
+.deleteCross {
+    position: absolute;
+    right: 3%;
+}
+
+
+/* Details book page */
+.bookImageContainer {
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookImage {
+    max-width: 150px;
+}
+
+.bookInformations {
+    margin: 0 15px;
+    margin-top: 3em;
+}
+
+.bookInformations > div > h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.bookInformations > div > h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.bookInformations > div > p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.backToBooksList {
+    display: block;
+    margin: 5px auto;
+    max-width: 80%;
+    width: 200px;
+    text-align: center;
+}
+
+.updateBook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.updateBook > input {
+    margin: 0;
+    width: 234px;
+}
+
+.buttonTabletDesktop {
+    display: none;
+}
+
+.availableBook, .borrowedBook {
+    display: flex;
+    margin: 10px 15px;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.availableBook > p, .borrowedBook > p {
+    margin: 5px;
+    text-align: center;
+}
+
+.availableBook > input, .borrowedBook > input, .availableBook > select, .borrowedBook > select {
+    margin: 5px;
+    min-width: 150px;;
+}
+
+.availableBook {
+    display: none; /* if is borrowed... */
+}
+
+
+/* Users list page */
+.userCards {
+    display: flex;
+    margin: 5px 15px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.userCard {
+    margin: 5px;
+    position: relative;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    padding: 10px 15px;
+    max-width: 100%;
+    min-width: 150px;
+}
+
+.userCard > a > img {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.userCard > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.userCard > div > form > input {
+    margin: 0 2px;
+    padding: 5px 10px;
+}
+
+
+/* User details page */
+.userDetails {
+    margin: 3em 15px;
+    font-size: 1.1em;
+}
+
+.userDetails > p {
+    margin: 10px 0;
+}
+
+.userDetails > .userNames {
+    font-size: 1.2em;
+}
+
+.userDetails > ul {
+    margin-top: 10px;
+    list-style-type: circle;
+}
+
+
+/* Form for add or update a book */
+.addBook {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0;
+}
+
+.addBook > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+
+.addBook > div > input {
+    color: var(--grey);
+}
+
+.addBook > div > label {
+    text-align: center;
+    color: var(--grey);
+    opacity: 0.6;
+}
+
+.addBook > div > textarea {
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    align-self: center;
+    max-width: 100%;
+}
+
+.inputImage {
+    max-width: 65%;
+    align-self: center;
+    border: none;
+}
+
+.addBook > .bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    max-width: 85%;
+}
+
+.addBook > .bottom > span {
+    display: flex;
+    flex-flow: column-reverse wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.addBook > .bottom > span > a {
+    width: 123px;
+}
+
+.addBook > .bottom > p {
+    color: var(--grey);
+    opacity: 0.6;
+}
+
+
+/* Form for add or update an user */
+.addUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 15px;
+}
+
+.addUser > p {
+    color: var(--grey);
+    opacity: 0.6;
+}
+
+
+
+
+/* ##################################################################### */
+/* #####################   SMARTPHONE (LANDSCAPE)   #################### */
+/* ##################################################################### */
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) {
+
+    /* Navbar */
+    .navbarMobile {
+        display: none;
+    }
+    
+    .navbarTabletDesktop {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: bottom;
+    }
+
+    .navbarTabletDesktop > ul {
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        list-style: none;
+    }
+
+    .navbarTabletDesktop > ul > li > a {
+        padding: 0 10px;
+        font-size: 1.2em;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    .navbarTabletDesktop > ul > li > a:hover {
+        text-decoration: underline;
+    }
+
+    .navbarTabletDesktop > ul > li > a > img {
+        width: 1.2em;
+    }
+
+    /* Home page */
+    .barForm {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center; 
+    }
+
+    .bookCards {
+        flex-flow: row wrap;
+        align-items: space-between;
+    }
+
+    .bookCard {
+        width: 35%;
+    }
+
+    /* Details book page */
+    .buttonMobile {
+        display: none;
+    }
+    
+    .buttonTabletDesktop {
+        display: block;
+    }
+
+    .availableBook, .borrowedBook {
+        margin: 10px auto;
+        max-width: 400px;
+    }
+
+    
+    
+
+}
 
 /* ##################################################################### */
 /* ############################   TABLETS   ############################ */
 /* ##################################################################### */
-/* Small devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+    /* Home page */
+    .bookCard {
+        width: 30%;
+    }
+
+    /* Details book page */        
+    .bookInformations {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .bookInformations > .bookImageContainer {
+        margin: 10px 5px;
+        min-width: 20%;
+        max-width: 350px;
+        align-items: flex-start;
+    }
+    
+    .bookInformations > .bookDescription {
+        margin: 0 5px;
+    }
+
+    .updateOrLoanOrReturn {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 10px auto;
+        width: 95%;
+    }
+
+    .updateOrLoanOrReturn > .updateOrReturn {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .updateOrLoanOrReturn > .updateOrReturn > input, .updateOrLoanOrReturn > .updateOrReturn > a {
+        width: 150px;
+        margin: 0 10px;
+    }
+
+    .borrowedBook, .availableBook {
+        margin: 0;
+    }
+
+
+    /* Form for add or update a book */
+    .addBook {
+        flex-flow: row wrap;
+    }
+
+    .addBook > div > textarea {
+        align-self: center;
+    }
+
+    .addBook > .bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 625px;  
+    }
+
+    .addBook > .bottom > span {
+        display: flex;
+        flex-flow: row nowrap;
+    }
 
 }
 
 /* ##################################################################### */
 /* ############################   DESKTOPS   ########################### */
 /* ##################################################################### */
-/* Medium devices (desktops, 992px and up) */
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
+    /* Home page */
+    .bookCard {
+        width: 20%;
+    }
 
 }
 
 /* ##################################################################### */
 /* ########################   LARGE DESKTOPS   ######################### */
 /* ##################################################################### */
-/* Large devices (large desktops, 1200px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
+    /* Home page */
+    .bookCard {
+        width: 15%;
+    }
+
+    /* Add or upadte a book */
+    .addBook > .bottom {
+        margin: 0 20%;
+    }
 
 }
 
